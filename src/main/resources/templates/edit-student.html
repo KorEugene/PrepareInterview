@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update student</title>
+</head>
+<body>
+<div class="container">
+    <h2>Update student</h2>
+    <form th:action="@{'/update'}" th:object="${student}" method="post">
+        <div>
+            <label for="studentId">Id</label>
+            <input type="number" name="id" id="studentId" th:field="*{id}">
+        </div>
+        <div>
+            <label for="studentName">Name</label>
+            <input type="text" name="name" id="studentName">
+        </div>
+        <div>
+            <label for="studentAge">Age</label>
+            <input type="number" name="age" id="studentAge">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+</div>
+</body>
+</html>
